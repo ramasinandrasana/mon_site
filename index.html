@@ -1,13 +1,311 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>CV Sparkle Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#f43f5e'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    Bienvenus
-    <nav>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="flex flex-col md:flex-row items-center gap-12 mb-20">
+            <div class="md:w-1/3">
+                <div class="rounded-full overflow-hidden border-4 border-primary shadow-lg w-64 h-64 mx-auto">
+                    <img src="http://static.photos/people/640x360/42" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="md:w-2/3 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Jean Dupont</h1>
+                <h2 class="text-2xl md:text-3xl text-primary mb-6">Développeur Full-Stack</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto md:mx-0">
+                    Passionné par la création d'applications web modernes avec des technologies comme React, Node.js et TailwindCSS.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-primary hover:bg-primary-600 text-white px-6 py-3 rounded-lg transition shadow-md">
+                        Contactez-moi
+                    </a>
+                    <a href="#projects" class="border border-primary text-primary hover:bg-primary-50 px-6 py-3 rounded-lg transition shadow-md">
+                        Mes Projets
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    </nav>
+        <!-- About Section -->
+        <section id="about" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center relative after:absolute after:w-16 after:h-1 after:bg-secondary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-4">
+                À Propos
+            </h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+                <p class="text-lg mb-6">
+                    Développeur Full-Stack avec 5 ans d'expérience dans la création d'applications web performantes et évolutives. 
+                    Spécialisé dans les technologies JavaScript modernes et passionné par l'UX/UI.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Informations Personnelles</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i data-feather="calendar" class="mr-2 text-secondary"></i>
+                                <span>30 ans</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="map-pin" class="mr-2 text-secondary"></i>
+                                <span>Paris, France</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="mail" class="mr-2 text-secondary"></i>
+                                <span>jean.dupont@email.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="phone" class="mr-2 text-secondary"></i>
+                                <span>+33 6 12 34 56 78</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Mes Compétences</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>JavaScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>React</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>Node.js</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center relative after:absolute after:w-16 after:h-1 after:bg-secondary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-4">
+                Expérience Professionnelle
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <div class="absolute left-8 top-0 h-full w-0.5 bg-gray-200 md:left-1/2"></div>
+                    
+                    <!-- Experience Item 1 -->
+                    <div class="mb-12">
+                        <div class="flex flex-col md:flex-row justify-center">
+                            <div class="md:w-5/12 md:text-right md:pr-8 order-1">
+                                <h3 class="text-xl font-bold text-primary">Développeur Senior</h3>
+                                <p class="text-secondary">Tech Solutions Inc.</p>
+                                <p class="text-gray-500">2020 - Présent</p>
+                            </div>
+                            <div class="hidden md:flex items-center justify-center w-2/12 px-4 order-2">
+                                <div class="w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-md"></div>
+                            </div>
+                            <div class="md:w-5/12 md:pl-8 order-3 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                                    <p>Conception et développement d'applications web complexes avec React et Node.js. Encadrement d'une équipe de 5 développeurs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 2 -->
+                    <div class="mb-12">
+                        <div class="flex flex-col md:flex-row justify-center">
+                            <div class="md:w-5/12 md:text-right md:pr-8 order-3 md:order-1">
+                                <h3 class="text-xl font-bold text-primary">Développeur Full-Stack</h3>
+                                <p class="text-secondary">Web Agency Paris</p>
+                                <p class="text-gray-500">2017 - 2020</p>
+                            </div>
+                            <div class="hidden md:flex items-center justify-center w-2/12 px-4 order-2">
+                                <div class="w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-md"></div>
+                            </div>
+                            <div class="md:w-5/12 md:pl-8 order-1 md:order-3 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                                    <p>Développement de sites web et applications pour divers clients. Participation à toutes les phases du projet, de la conception au déploiement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center relative after:absolute after:w-16 after:h-1 after:bg-secondary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-4">
+                Mes Projets
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+                    <img src="http://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Plateforme E-commerce</h3>
+                        <p class="text-gray-600 mb-4">Une plateforme complète avec paiement en ligne et gestion de stocks.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">Node.js</span>
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-secondary hover:text-secondary-600 font-medium flex items-center">
+                            Voir le projet <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+                    <img src="http://static.photos/technology/640x360/2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Application de Gestion</h3>
+                        <p class="text-gray-600 mb-4">Outil de gestion de projets avec tableau de bord analytique.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">Vue.js</span>
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">Firebase</span>
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        </div>
+                        <a href="#" class="text-secondary hover:text-secondary-600 font-medium flex items-center">
+                            Voir le projet <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+                    <img src="http://static.photos/technology/640x360/3" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Portfolio Artistique</h3>
+                        <p class="text-gray-600 mb-4">Site vitrine pour un artiste avec galerie interactive.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">GSAP</span>
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">Three.js</span>
+                            <span class="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full">WebGL</span>
+                        </div>
+                        <a href="#" class="text-secondary hover:text-secondary-600 font-medium flex items-center">
+                            Voir le projet <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center relative after:absolute after:w-16 after:h-1 after:bg-secondary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-4">
+                Contactez-moi
+            </h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Informations de Contact</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-feather="mail" class="mr-4 text-secondary mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-600">jean.dupont@email.com</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="phone" class="mr-4 text-secondary mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Téléphone</h4>
+                                    <p class="text-gray-600">+33 6 12 34 56 78</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="map-pin" class="mr-4 text-secondary mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Adresse</h4>
+                                    <p class="text-gray-600">123 Rue de Paris, 75000 Paris, France</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-semibold mb-4 text-primary">Réseaux Sociaux</h3>
+                            <div class="flex gap-4">
+                                <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition">
+                                    <i data-feather="github" class="text-gray-700"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition">
+                                    <i data-feather="linkedin" class="text-gray-700"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition">
+                                    <i data-feather="twitter" class="text-gray-700"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-1 font-medium">Nom Complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-1 font-medium">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+                            <div>
+                                <label for="subject" class="block mb-1 font-medium">Sujet</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-1 font-medium">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"></textarea>
+                            </div>
+                            <button type="submit" class="bg-primary hover:bg-primary-600 text-white px-6 py-3 rounded-lg transition shadow-md w-full">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script
 </body>
 </html>
